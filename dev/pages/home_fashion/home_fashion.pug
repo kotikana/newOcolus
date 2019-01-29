@@ -8,24 +8,24 @@ html(lang='en')
 		link(link rel="shortcut icon" href="img/img_service/favicon.ico" type="image/png")
 
 	body
-		.header.layout_fashion
-			div.header_top
-				.header_top_language
-					.header_top_language__styled
-						select.header_top_language_select
-							option(value='english') English
-							option(value='russian') Russian
-							option(value='ukrainian') Ukraine
-				.header_top_menu_list
-						a.header_top_list_item WOMEN
-						a.header_top_list_item MEN
-						a.header_top_list_item CHILDREN
-						a.header_top_list_item ACCESSORIES 
-						a.header_top_list_item BLOG 
-						a.header_top_list_item CONTACT
-				.header_top_basket
-					a.header_top_backet_link $0.0 ITEMS
-			div.header_down
+		.header
+			.header_top
+				.language
+					p.language_title._selecttitle
+					select.language_select._select(name='language')
+						option(value='english') English
+						option(value='ukrainian') Ukrainian
+						option(value='russian') Russian
+				.menu
+						a.menu_item WOMEN
+						a.menu_item MEN
+						a.menu_item CHILDREN
+						a.menu_item ACCESSORIES 
+						a.menu_item BLOG 
+						a.menu_item CONTACT
+				.basket
+					a.backet_link $0.0 ITEMS
+			.header_down
 				a.header_down_link
 					img(src="img/img_service/line.svg", alt="")
 				a.header_down_logo
@@ -63,29 +63,30 @@ html(lang='en')
 						img(src="img/01fashion_11.jpg", alt="")
 					.col-3.layout_row_item
 						img(src="img/01fashion_12.jpg", alt="")
-		.footer01.layout_fashion
-			h1.footer01_title Join Our Newsletter
-			form.footer01_form(method="post" action="#")
-				input.footer01_form_input(type="email" id="email" name="subscribe" placeholder="Enter your email address"  required)
-				span.footer01_form__error Это поле должно содержать E-Mail в формате example@site.com
-				button.footer01_form_button(type="button") Subscribe 
-			.header_top_menu_list.top_menu_list__color
-				a.header_top_menu_list__color_item WOMEN
-				a.header_top_menu_list__color_item MEN
-				a.header_top_menu_list__color_item CHILDREN
-				a.header_top_menu_list__color_item ACCESSORIES 	
-				a.header_top_menu_list__color_item BLOG 
-				a.header_top_menu_list__color_item CONTACT
-			.footer01_social
+		.footer
+			h1.footer_title Join Our Newsletter
+			form.form(method="post" action="#")
+				input.form_input(type="email" id="email" name="subscribe" placeholder="Enter your email address"  required)
+				button.form_button(type="button") Subscribe 
+			.menu.menu__footer
+				a.menu_item.menu_item__footer WOMEN
+				a.menu_item.menu_item__footer MEN
+				a.menu_item.menu_item__footer CHILDREN
+				a.menu_item.menu_item__footer ACCESSORIES 	
+				a.menu_item.menu_item__footer BLOG 
+				a.menu_item.menu_item__footer CONTACT
+			.social
 				a
-					img.footer01_social_item(src="01footer/fb.png", alt="")
+					img.social_item(src="img/img_service/fb.png", alt="")
 				a
-					img.footer01_social_item(src="01footer/TW.png", alt="")
+					img.social_item(src="img/img_service/TW.png", alt="")
 				a
-					img.footer01_social_item(src="01footer/GG.png", alt="")
+					img.social_item(src="img/img_service/GG.png", alt="")
 				a
-					img.footer01_social_item(src="01footer/PP.png", alt="")
+					img.social_item(src="img/img_service/PP.png", alt="")
 				a
-					img.footer01_social_item(src="01footer/IN.png", alt="")
-			p.footer01_copypight © 2018 Ocolus. All Rights Reserved
+					img.social_item(src="img/img_service/IN.png", alt="")
+			p.footer_copypight © 2018 Ocolus. All Rights Reserved
+		script( src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+		script( src="dev/pages/home_fashion/home_fashion.js")
 
