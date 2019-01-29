@@ -1,0 +1,107 @@
+doctype html
+html(lang='en')
+	head
+		title Ocolus Product on Sale
+		link(rel="stylesheet", href="dev/pages/product_sale/product_sale.css")
+		link(link rel="shortcut icon" href="img/img_service/favicon.ico" type="image/png")
+		link(rel="stylesheet", href="dev/general/fonts/fonts.css")
+		link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.6.3/css/all.css', integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/', crossorigin='anonymous')
+	body
+		include ../../bem/alter_header/alter_header.pug
+
+		.nav
+			a.nav_link
+				span.nav_link_item Home
+			a.nav_link
+				span.nav_link_item Clothing
+			a.nav_link
+				span.nav_link_item Men
+			a.nav_link
+				span.nav_link_item Colorful Palm Angels Haze
+		.product
+			.product_sl
+				.slider
+					.slider_slide
+						img.slider_img(src='img/sl1.jpg', alt='img')
+					.slider_slide
+						img.slider_img(src='img/sl2.jpg', alt='img')
+					.slider_slide
+						img.slider_img(src='img/sl3.jpg', alt='img')
+					.slider_slide
+						img.slider_img(src='img/sl4.jpg', alt='img')
+					.slider_slide
+						img.slider_img(src='img/sl5.jpg', alt='img')
+					.slider_slide
+						img.slider_img(src='img/sl6.jpg', alt='img')
+				.slider2
+						.slider2_slide
+							img.slider2_slide_img(src='img/slm1.jpg', alt='img')
+						.slider2_slide
+							img.slider2_slide_img(src='img/slm2.jpg', alt='img')
+						.slider2_slide
+							img.slider2_slide_img(src='img/slm3.jpg', alt='img')
+						.slider2_slide
+							img.slider2_slide_img(src='img/slm4.jpg', alt='img')
+						.slider2_slide
+							img.slider2_slide_img(src='img/slm5.jpg', alt='img')
+						.slider2_slide
+							img.slider2_slide_img(src='img/slm6.jpg', alt='img')
+			.product_choice
+				h2.product_choice_title Colorful Palm Angels Haze
+				.product_choice_rating
+				.product_choice_price 
+					span.product_choice_price_new $605.00 
+					span.product_choice_price_old $705.00
+				.product_choice_text Octopus - most powerful WordPress theme for your tore online. The best choice for your next personal or multi-vendor marketplace.
+					.product_choice_time
+						h1.product_choice_time_title Expires In
+						._timer
+						div
+							span.days
+							.smalltext Days
+						div
+							span.hours
+							.smalltext Hours
+						div
+							span.minutes
+							.smalltext Minutes
+						div
+							span.seconds
+							.smalltext Seconds
+					.product_choice_color
+						input.product_choice_color_check1(type='radio', name='color',id="check1" value='yellow')
+						label(for="check1")
+						input.product_choice_color_check2(type='radio', name='color',id="check2" value='grey')
+						label(for="check2")
+						input.product_choice_color_check3(type='radio', name='color',id="check3" value='green')
+						label(for="check3")
+						input.product_choice_color_check4(type='radio', name='color',id="check14" value='pink')
+						label(for="check4")
+
+						.product_choice_size
+							label
+								input.product-choice_size_check(type='radio', name='size')
+								span.product-choice_size_check_span S
+							label
+								input.product-choice_size_check(type='radio', name='size')
+								span.product-choice_size_check_span M
+							label
+								input.product-choice_size_check(type='radio', name='size')
+								span.product-choice_size_check_span L
+							label
+								input.product-choice_size_check(type='radio', name='size')
+								span.product-choice_size_check_span XL
+							label
+								input.product-choice_size_check(type='radio', name='size')
+								span.product-choice_size_check_span XXL
+
+					.product_choice_buttons
+					.product_choice_about
+
+
+			script( src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+			script( src="dev/pages/product_sale/product_sale.js")
+			script( src="dev/general/libs/slick/slick.js")
+
+
+
