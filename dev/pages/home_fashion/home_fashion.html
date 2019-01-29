@@ -8,15 +8,16 @@
     <link link rel="shortcut icon" href="img/img_service/favicon.ico" type="image/png">
   </head>
   <body>
-    <div class="header">
+    <div class="header layout_fashion">
       <div class="header_top">
         <div class="language">
-          <p class="language_title _selecttitle"></p>
-          <select class="language_select _select" name="language">
-            <option value="english">English</option>
-            <option value="ukrainian">Ukrainian</option>
-            <option value="russian">Russian</option>
-          </select>
+          <div class="language__styled">
+            <select class="language_select">
+              <option value="english">English</option>
+              <option value="russian">Russian</option>
+              <option value="ukrainian">Ukraine</option>
+            </select>
+          </div>
         </div>
         <div class="menu"><a class="menu_item">WOMEN</a><a class="menu_item">MEN</a><a class="menu_item">CHILDREN</a><a class="menu_item">ACCESSORIES </a><a class="menu_item">BLOG </a><a class="menu_item">CONTACT</a></div>
         <div class="basket"><a class="backet_link">$0.0 ITEMS</a></div>
@@ -47,17 +48,15 @@
         </div>
       </div>
     </div>
-    <div class="footer">
-      <h1 class="footer_title">Join Our Newsletter</h1>
-      <form class="form" method="post" action="#">
-        <input class="form_input" type="email" id="email" name="subscribe" placeholder="Enter your email address" required>
-        <button class="form_button" type="button">Subscribe </button>
+    <div class="footer01 layout_fashion">
+      <h1 class="footer01_title">Join Our Newsletter</h1>
+      <form class="footer01_form" method="post" action="#">
+        <input class="footer01_form_input" type="email" id="email" name="subscribe" placeholder="Enter your email address" required><span class="footer01_form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
+        <button class="footer01_form_button" type="button">Subscribe </button>
       </form>
-      <div class="menu menu__footer"><a class="menu_item menu_item__footer">WOMEN</a><a class="menu_item menu_item__footer">MEN</a><a class="menu_item menu_item__footer">CHILDREN</a><a class="menu_item menu_item__footer">ACCESSORIES 	</a><a class="menu_item menu_item__footer">BLOG </a><a class="menu_item menu_item__footer">CONTACT</a></div>
-      <div class="social"><a><img class="social_item" src="img/img_service/fb.png" alt=""></a><a><img class="social_item" src="img/img_service/TW.png" alt=""></a><a><img class="social_item" src="img/img_service/GG.png" alt=""></a><a><img class="social_item" src="img/img_service/PP.png" alt=""></a><a><img class="social_item" src="img/img_service/IN.png" alt=""></a></div>
-      <p class="footer_copypight">© 2018 Ocolus. All Rights Reserved</p>
+      <div class="header_top_menu_list top_menu_list__color"><a class="header_top_menu_list__color_item">WOMEN</a><a class="header_top_menu_list__color_item">MEN</a><a class="header_top_menu_list__color_item">CHILDREN</a><a class="header_top_menu_list__color_item">ACCESSORIES 	</a><a class="header_top_menu_list__color_item">BLOG </a><a class="header_top_menu_list__color_item">CONTACT</a></div>
+      <div class="footer01_social"><a><img class="footer01_social_item" src="01footer/fb.png" alt=""></a><a><img class="footer01_social_item" src="01footer/TW.png" alt=""></a><a><img class="footer01_social_item" src="01footer/GG.png" alt=""></a><a><img class="footer01_social_item" src="01footer/PP.png" alt=""></a><a><img class="footer01_social_item" src="01footer/IN.png" alt=""></a></div>
+      <p class="footer01_copypight">© 2018 Ocolus. All Rights Reserved</p>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="dev/pages/home_fashion/home_fashion.js"></script>
   </body>
 </html>
