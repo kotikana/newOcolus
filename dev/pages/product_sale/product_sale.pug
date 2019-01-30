@@ -18,7 +18,7 @@ html(lang='en')
 				span.nav_link_item Men
 			a.nav_link
 				span.nav_link_item Colorful Palm Angels Haze
-		.product
+		.product.layout_product
 			.product_sl
 				.slider
 					.slider_slide
@@ -46,62 +46,69 @@ html(lang='en')
 							img.slider2_slide_img(src='img/slm5.jpg', alt='img')
 						.slider2_slide
 							img.slider2_slide_img(src='img/slm6.jpg', alt='img')
-			.product_choice
-				h2.product_choice_title Colorful Palm Angels Haze
-				.product_choice_rating
-				.product_choice_price 
-					span.product_choice_price_new $605.00 
-					span.product_choice_price_old $705.00
-				.product_choice_text Octopus - most powerful WordPress theme for your tore online. The best choice for your next personal or multi-vendor marketplace.
-					.product_choice_time
-						h1.product_choice_time_title Expires In
-						._timer
-						div
-							span.days
-							.smalltext Days
-						div
-							span.hours
-							.smalltext Hours
-						div
-							span.minutes
-							.smalltext Minutes
-						div
-							span.seconds
-							.smalltext Seconds
-					.product_choice_color
-						input.product_choice_color_check1(type='radio', name='color',id="check1" value='yellow')
-						label(for="check1")
-						input.product_choice_color_check2(type='radio', name='color',id="check2" value='grey')
-						label(for="check2")
-						input.product_choice_color_check3(type='radio', name='color',id="check3" value='green')
-						label(for="check3")
-						input.product_choice_color_check4(type='radio', name='color',id="check14" value='pink')
-						label(for="check4")
+			.choice
+				h2.choice_title Colorful Palm Angels Haze
+				.choice_rating
+				.choice_price 
+					span.choice_price__new $605.00 
+					span.choice_price__old $705.00
+				.choice_text Octopus - most powerful WordPress theme for your tore online. The best choice for your next personal or multi-vendor marketplace.
+				.timer
+					h1.timer_title
+						<i class="far fa-clock"></i> Expires In
+					.timer_div
+						.timer_clock._timer
+						.timer_text
+							span.timer_text-item Days
+							span.timer_text-item Hours
+							span.timer_text-item Mins
+							span.timer_text-item Secs
 
-						.product_choice_size
-							label
-								input.product-choice_size_check(type='radio', name='size')
-								span.product-choice_size_check_span S
-							label
-								input.product-choice_size_check(type='radio', name='size')
-								span.product-choice_size_check_span M
-							label
-								input.product-choice_size_check(type='radio', name='size')
-								span.product-choice_size_check_span L
-							label
-								input.product-choice_size_check(type='radio', name='size')
-								span.product-choice_size_check_span XL
-							label
-								input.product-choice_size_check(type='radio', name='size')
-								span.product-choice_size_check_span XXL
+				.color
+					h5.color_title Color
+					label.color_label.color_label__yellow(for='yellow')
+						input#yellow.color_input(type='radio', name='color', value='red')
+						span.color_check
+					label.color_label.color_label__grey(for='grey')
+						input#grey.color_input(type='radio', name='color')
+						span.color_check
+					label.color_label.color_label__green(for='green')
+						input#green.color_input(type='radio', name='color')
+						span.color_check
+					label.color_label.color_label__pink(for='pink')
+						input#pink.color_input(type='radio', name='color')
+						span.color_check
+				.size
+					h5.size_title Size
+					label.size_label
+						input.size_check(type='radio', name='size')
+						span.size_check__span S
+					label.size_label
+						input.size_check(type='radio', name='size')
+						span.size_check__span M
+					label.size_label
+						input.size_check(type='radio', name='size')
+						span.size_check__span L
+					label.size_label
+						input.size_check(type='radio', name='size')
+						span.size_check__span XL
+					label.size_label
+						input.size_check(type='radio', name='size')
+						span.size_check__span XXL
 
-					.product_choice_buttons
-					.product_choice_about
+				.amount
+					span.amount_down._minus
+					input(type='text', value='01')
+					span.amount_up._plus 
+
+			.product_choice_about
 
 
 			script( src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
-			script( src="dev/pages/product_sale/product_sale.js")
+			
 			script( src="dev/general/libs/slick/slick.js")
+			script( src="dev/general/libs/jquery.countdown.js")
+			script( src="dev/pages/product_sale/product_sale.js")
 
 
 
