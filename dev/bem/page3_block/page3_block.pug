@@ -1,0 +1,245 @@
+-
+	var dataMixin = [
+		{
+			name: 'Collana Multifilo',
+			price: '$25.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: true,
+			color_star: ['#ffbb04','#ffbb04','#ffbb04','','',],
+			img: 'img/03shop1.jpg',
+			heart: false,
+			page: false,
+		},
+		{
+			name: 'The Arley In Wildfire',
+			price: '$185.00',
+			oldprice: '$380.00',
+			color: 'red',
+			fsale: 'sale',
+			fnew: 'new',
+			rating: true,
+			color_star: ['#ffbb04','#ffbb04','#ffbb04','#ffbb04','',],
+			img: 'img/03shop2.jpeg',
+			heart: false,
+			page: false,
+		},
+		{
+			name: 'Colorful Print',
+			price: '$605.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: true,
+			color_star: ['#ffbb04','#ffbb04','#ffbb04','','',],
+			img: 'img/03shop3.jpg',
+			heart: false,
+			page: false,
+		},
+		{
+			name: 'Mini Sundress',
+			price: '$19.95',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: 'new',
+			rating: '',
+			color_star: ['','','','','',],
+			img: 'img/03shop4.jpg',
+			heart: false,
+			page: false,
+		},
+		{
+			name: 'Romantic Floral',
+			price: '$20.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: '',
+			color_star: ['','','','','',],
+			img: 'img/03shop5.jpg',
+			heart: false,
+			page: false,
+		},
+		{
+			name: 'Premium Cardigan',
+			price: '$25.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: '',
+			color_star: ['','','','','',],
+			img: 'img/03shop6.jpg',
+			heart: false,
+			page: false,
+		},
+		{
+			name: 'Bloomington Round',
+			price: '$20.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: '',
+			color_star: ['','','','','',],
+			img: 'img/03shop7.jpg',
+			heart: false,
+			page: false,
+		},
+		{
+			name: 'Classics Automatic',
+			price: '$19.95',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: 'new',
+			rating: '',
+			color_star: ['','','','','',],
+			img: 'img/03shop8.jpg',
+			heart: false,
+			page: false,
+		},
+		{
+			name: 'Slim-fit linen shirt',
+			price: '$25.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: true,
+			color_star: ['#ffbb04','#ffbb04','#ffbb04','','',],
+			img: 'img/03shop9.jpg',
+			heart: false,
+			page: false,
+		},
+	]
+
+
+	var dataMixin_homepage = [
+		{
+			name: 'Rollo LoyalBlue',
+			price: '$92.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: '',
+			color_star: '',
+			img: 'img/02Rollo LoyalBlue.jpg',
+			heart: true,
+			page: true,
+		},
+		{
+			name: 'Echasse Bowl',
+			price: '$252.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: '',
+			color_star: '',
+			img: 'img/02Echasse Bowl.jpg',
+			heart: true,
+			page: true,
+		},
+		{
+			name: 'Mimic Mirror',
+			price: '$44.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: 'new',
+			rating: '<i class="far fa-heart"></i>',
+			color_star: '',
+			img: 'img/02MimicMirror.jpg',
+			heart: true,
+			page: true,
+		},
+		{
+			name: 'rp78 turntable',
+			price: '$190.05',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: '',
+			color_star: '',
+			img: 'img/02rp78 turntable.jpg',
+			heart: true,
+			page: true,
+		},
+		
+		]
+
+
+
+mixin itemProduct(objItem)
+	//-зачем нужен класс item_grid и если нужен, то неправильное название. 
+	div.item.item_grid 
+		div.item_block(class = objItem.page ? "item_block__page2" : "")
+			img(src="" + objItem.img)
+		div.item_text(class = objItem.page ? "item_text__page2" : "")
+			div.item_text__name=objItem.name
+			div.item_text__price
+				//-по БЄМ должно біть item_newprice и item_oldprice
+				//- почему инлайн стили, а не модификатор
+				span.newprice(style = "color: " + objItem.color)=objItem.price 
+				span.oldprice=objItem.oldprice
+			div.item_text__rating
+				if objItem.rating
+					each itemAr in objItem.color_star
+						//- почему инлайн стили, а не модификатор
+						i.fa.fa-star(style = "color: " + itemAr)
+			div.item_text__heart
+				if objItem.heart
+					i.far.fa-heart
+		div.tooltip.tooltip__page3
+			div.tooltip__page3-sale=objItem.fsale
+			div.tooltip__page3-new=objItem.fnew
+
+mixin itemGrid(dataMixin)
+	ul.row
+		each objItem in dataMixin
+			li.col.col-sm-4
+				//- //-зачем нужен класс item_grid и если нужен, то неправильное название. 
+				//- div.item.item_grid 
+				//- 	div.item_block
+				//- 		img(src="" + objItem.img)
+				//- 	div.item_text
+				//- 		div.item_text__name=objItem.name
+				//- 		div.item_text__price
+				//- 			//-по БЄМ должно біть item_newprice и item_oldprice
+				//- 			//- почему инлайн стили, а не модификатор
+				//- 			span.newprice(style = "color: " + objItem.color)=objItem.price 
+				//- 			span.oldprice=objItem.oldprice
+				//- 		div.item_text__rating
+				//- 			if objItem.rating
+				//- 				each itemAr in objItem.color_star
+				//- 					//- почему инлайн стили, а не модификатор
+				//- 					i.fa.fa-star(style = "color: " + itemAr)
+				//- 	div.tooltip.tooltip__page3
+				//- 		div.tooltip__page3-sale=objItem.fsale
+				//- 		div.tooltip__page3-new=objItem.fnew
+				+itemProduct(objItem)
+
+mixin homepage(dataMixin_homepage)
+	ul.row
+		each objItem in dataMixin_homepage
+			li.col.col-sm-3
+				+itemProduct(objItem)
+
+// mixin product(dataMixin_product)
+// 	ul.row
+// 		each objItem in dataMixin_homepage
+// 			li.col.col-sm-3
+// 				+itemProduct(objItem)
+
+
+
+
+
