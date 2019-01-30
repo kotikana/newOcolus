@@ -25,6 +25,29 @@ $(document).ready(function(){
       }
     },]
   });
+
+
+  $('._timer').countdown('2019/10/10', function(event) {
+    $(this).html(event.strftime(
+      '<span class="timer_clock-item">%D</span>' + 
+      '<span class="timer_clock-item">%H</span>' + 
+      '<span class="timer_clock-item">%M</span> ' + 
+      '<span class="timer_clock-item">%S</span>'
+      ));
+  });
+
+$('.down').click(function () {
+      var $input = $(this).parent().find('input');
+      var count = parseInt($input.val()) - 1;
+      count = count < 1 ? 1 : count;
+      $input.val(count);
+      $input.change();
+      return false;
+    });
+    $('.up').click(function () {
+      var $input = $(this).parent().find('input');
+      $input.val(parseInt($input.val()) + 1);
+      $input.change();
+      return false;
+    });
 });
-
-
