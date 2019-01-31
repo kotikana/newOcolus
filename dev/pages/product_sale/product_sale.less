@@ -1,10 +1,11 @@
+@import url(../../bem/button/button.less);
+
 *{
 	margin: 0;
 	box-sizing:border-box;
 }
 .layout_product{
 	max-width: 1170px;
-	margin:0 auto;
 }
 
 @import url(../../general/libs/slick/slick-theme p_s.less);
@@ -34,6 +35,27 @@
 
 	}
 }
+.prev-img{
+	display: flex;
+	background:  #f9f9f9;
+	border: 2px solid  #f9f9f9;
+	height: 104px;
+}
+.prev-text{
+	padding: 25px;
+	&_item{
+		font:500 18px/30px 'Poppins', sans-serif;
+		color:  #293341;
+	}
+		&_price{
+			font:400 16px/20px 'Poppins', sans-serif;
+			color:  #7b7b7b;
+	}
+}
+
+.center-img{
+	display: flex;
+}
 .slider{
 	margin-bottom: 10px;
 	max-width: 560px;
@@ -60,12 +82,16 @@
 }
 .product{
 	display: flex;
-	margin:0 390px;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 80px;
 	&_sl{
 		display: flex;
 		flex-direction: column;
 	}
 }
+
 .choice{
 	padding-left: 30px;
 	display: flex;
@@ -130,7 +156,7 @@
 		color:  #23232c;
 		margin-top: 5px;
 		&-item{
-			margin:0 15px;
+			margin:0 18px;
 		}
 	}
 }
@@ -156,9 +182,13 @@
 .color{
 	&_input{
 		display: none;
-		&:checked .color_label{
-			border:1px solid red;
-			position:absolute;
+		&:checked + label{
+			&:before{
+				content:url(../../../img/img_service/color.png);
+				position:absolute;
+				left: 7px;
+				top: 3px;
+			}
 		}
 	}
 	&_title{
@@ -172,6 +202,7 @@
 		border-radius:50%;
 		margin-right: 10px;
 		cursor: pointer;
+		position: relative;
 		&__yellow{
 			background:#FFBA00;
 		}
@@ -191,12 +222,49 @@
 	border:1px #F1F1F1;
 	background: #F9F9F9;
 	width: 140px;
-	&_down:before{
-		content: '<';
-		// padding:20px;
+	font:500 18px/30px 'Poppins', sans-serif;
+color:  #293341;
+display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+	&_input{
+		border:0;
+		outline: 0;
+		padding:15px 20px;
+		background: #F9F9F9;
+		width:60%;
+		font:500 18px/30px 'Poppins', sans-serif;
+color:  #293341;
+text-align: center;
 	}
-	&_up:before{
-		content: '>';
-		// padding:20px;
+	&_down,&_up{
+		cursor: pointer;
 	}
 }
+
+.buttons{
+  display: flex;
+}
+.about{
+	display: flex;
+	&_prop{
+		display: flex;
+		flex-direction: column;
+		font:500 16px/30px 'Poppins', sans-serif;
+		color:  #293341;
+	}
+	&_val{
+		display: flex;
+		flex-direction: column;
+		font:300 16px/30px 'Poppins', sans-serif;
+		color:  #7b7b7b;
+		margin-left: 60px;
+	}
+	}
+.social_link{
+		color:#7b7b7b;
+		margin-right: 35px;
+	}
+

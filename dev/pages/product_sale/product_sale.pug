@@ -10,99 +10,131 @@ html(lang='en')
 		include ../../bem/alter_header/alter_header.pug
 
 		.nav
-			a.nav_link
+			a.nav_link(href="#")
 				span.nav_link_item Home
-			a.nav_link
+			a.nav_link(href="#")
 				span.nav_link_item Clothing
-			a.nav_link
+			a.nav_link(href="#")
 				span.nav_link_item Men
-			a.nav_link
+			a.nav_link(href="#")
 				span.nav_link_item Colorful Palm Angels Haze
-		.product.layout_product
-			.product_sl
-				.slider
-					.slider_slide
-						img.slider_img(src='img/sl1.jpg', alt='img')
-					.slider_slide
-						img.slider_img(src='img/sl2.jpg', alt='img')
-					.slider_slide
-						img.slider_img(src='img/sl3.jpg', alt='img')
-					.slider_slide
-						img.slider_img(src='img/sl4.jpg', alt='img')
-					.slider_slide
-						img.slider_img(src='img/sl5.jpg', alt='img')
-					.slider_slide
-						img.slider_img(src='img/sl6.jpg', alt='img')
-				.slider2
-						.slider2_slide
-							img.slider2_slide_img(src='img/slm1.jpg', alt='img')
-						.slider2_slide
-							img.slider2_slide_img(src='img/slm2.jpg', alt='img')
-						.slider2_slide
-							img.slider2_slide_img(src='img/slm3.jpg', alt='img')
-						.slider2_slide
-							img.slider2_slide_img(src='img/slm4.jpg', alt='img')
-						.slider2_slide
-							img.slider2_slide_img(src='img/slm5.jpg', alt='img')
-						.slider2_slide
-							img.slider2_slide_img(src='img/slm6.jpg', alt='img')
-			.choice
-				h2.choice_title Colorful Palm Angels Haze
-				.choice_rating
-				.choice_price 
-					span.choice_price__new $605.00 
-					span.choice_price__old $705.00
-				.choice_text Octopus - most powerful WordPress theme for your tore online. The best choice for your next personal or multi-vendor marketplace.
-				.timer
-					h1.timer_title
-						<i class="far fa-clock"></i> Expires In
-					.timer_div
-						.timer_clock._timer
-						.timer_text
-							span.timer_text-item Days
-							span.timer_text-item Hours
-							span.timer_text-item Mins
-							span.timer_text-item Secs
+		.product
+			div.prev-img
+				a(href="#")
+					img(src='img/04Slim-fit cotton shirt.jpg')
+				div.prev-text
+					span.prev-text_item Slim fit-cotton shirt<br>
+					span.prev-text_price $ 380.00
+			div.center-img.layout_product
+				.product_sl
+					.slider
+						.slider_slide
+							img.slider_img(src='img/sl1.jpg', alt='img')
+						.slider_slide
+							img.slider_img(src='img/sl2.jpg', alt='img')
+						.slider_slide
+							img.slider_img(src='img/sl3.jpg', alt='img')
+						.slider_slide
+							img.slider_img(src='img/sl4.jpg', alt='img')
+						.slider_slide
+							img.slider_img(src='img/sl5.jpg', alt='img')
+						.slider_slide
+							img.slider_img(src='img/sl6.jpg', alt='img')
+					.slider2
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm1.jpg', alt='img')
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm2.jpg', alt='img')
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm3.jpg', alt='img')
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm4.jpg', alt='img')
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm5.jpg', alt='img')
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm6.jpg', alt='img')
+				.choice
+					h2.choice_title Colorful Palm Angels Haze
+					.choice_rating
+					.choice_price 
+						span.choice_price__new $605.00 
+						span.choice_price__old $705.00
+					.choice_text Octopus - most powerful WordPress theme for your tore online. The best choice for your next personal or multi-vendor marketplace.
+					.timer
+						h1.timer_title
+							<i class="far fa-clock"></i> Expires In
+						.timer_div
+							.timer_clock._timer
+							.timer_text
+								span.timer_text-item Days
+								span.timer_text-item Hours
+								span.timer_text-item Mins
+								span.timer_text-item Secs
+					form
+						.color
+							input#yellow.color_input(type='radio', name='color', value='red')
+							label.color_label.color_label__yellow(for='yellow')
+							input#grey.color_input(type='radio', name='color')
+							label.color_label.color_label__grey(for='grey')
+							input#green.color_input(type='radio', name='color')
+							label.color_label.color_label__green(for='green')
+							input#pink.color_input(type='radio', name='color')
+							label.color_label.color_label__pink(for='pink')
+						.size
+							h5.size_title Size
+							label.size_label
+								input.size_check(type='radio', name='size')
+								span.size_check__span S
+							label.size_label
+								input.size_check(type='radio', name='size')
+								span.size_check__span M
+							label.size_label
+								input.size_check(type='radio', name='size')
+								span.size_check__span L
+							label.size_label
+								input.size_check(type='radio', name='size')
+								span.size_check__span XL
+							label.size_label
+								input.size_check(type='radio', name='size')
+								span.size_check__span XXL
+						.buttons
+							.amount
+								span.amount_down._minus <
+								input.amount_input(type='text', value='01')
+								span.amount_up._plus >
+							button.button.button__product(type="button") Add to cart
+						button.button.button__buy(type="submit") buy now
+						.about
+							.about_prop
+								span SKU:
+								span Availability:
+								span Categories: 
+								span Tags:
+								span Share on:
+							.about_val
+								span HJ23456789
+								span In Stock
+								span Men, Fashion, New Trend 
+								span Octopus, Vintage, Awesome, Summer, Beachwear
+								.social
+									a.social_link(href="#")
+										i.fab.fa-facebook-f
+									a.social_link(href="#")
+										i.fab.fa-twitter
+									a.social_link(href="#")
+										i.fab.fa-google
+									a.social_link(href="#")
+										i.fab.fa-pinterest-p
+									a.social_link(href="#")
+										i.fab.fa-linkedin-in
+									a.social_link(href="#")
 
-				.color
-					h5.color_title Color
-					label.color_label.color_label__yellow(for='yellow')
-						input#yellow.color_input(type='radio', name='color', value='red')
-						span.color_check
-					label.color_label.color_label__grey(for='grey')
-						input#grey.color_input(type='radio', name='color')
-						span.color_check
-					label.color_label.color_label__green(for='green')
-						input#green.color_input(type='radio', name='color')
-						span.color_check
-					label.color_label.color_label__pink(for='pink')
-						input#pink.color_input(type='radio', name='color')
-						span.color_check
-				.size
-					h5.size_title Size
-					label.size_label
-						input.size_check(type='radio', name='size')
-						span.size_check__span S
-					label.size_label
-						input.size_check(type='radio', name='size')
-						span.size_check__span M
-					label.size_label
-						input.size_check(type='radio', name='size')
-						span.size_check__span L
-					label.size_label
-						input.size_check(type='radio', name='size')
-						span.size_check__span XL
-					label.size_label
-						input.size_check(type='radio', name='size')
-						span.size_check__span XXL
-
-				.amount
-					span.amount_down._minus
-					input(type='text', value='01')
-					span.amount_up._plus 
-
-			.product_choice_about
-
+			div.prev-img
+				a(href="#")
+					img(src='img/04Slim-fit cotton shirt.jpg')
+		.favorite
+			h3.favourite_title
+				
 
 			script( src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
 			
