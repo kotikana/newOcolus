@@ -54,3 +54,19 @@ $('._minus').click(function () {
       return false;
     });
 });
+
+(function($) {
+  $(function() {
+    $("ul.tabs_caption").on("click", ".tabs_title:not(.active)", function() {
+      $(this)
+        .addClass("active")
+        .siblings()//выполнять поиск по элементам этих элементов в дереве DOM и создавать новый объект jQuery из соответствующих элементов.
+        .removeClass("active")
+        .closest(".tabs")
+        .find(".tabs_content")
+        .removeClass("active")
+        .eq($(this).index())
+        .addClass("active");
+    });
+  });
+})(jQuery);
