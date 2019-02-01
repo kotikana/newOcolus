@@ -4,7 +4,7 @@ head
 	meta(charset="UTF-8")
 	title Document
 	link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous")
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 	//- <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
 	//- <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
 	link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css")
@@ -12,15 +12,15 @@ head
 	link(rel="stylesheet" href="dev/general/Normalize.css")
 	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous")
 body
-	include ../../bem/alter_header/alter_header.pug
-	main.page3_main
-	section.section1
-		h2.section1_title Fullwidth Sidebar 3 Column
-		div.section1_subtitle
-			a(href) home
-			div /
-			a(href) shop
-	div.container
+	div.container_page3
+		include ../../bem/alter_header/alter_header.pug
+		main.page3_main
+		section.section1
+			h2.section1_title Fullwidth Sidebar 3 Column
+			div.section1_subtitle
+				a(href) home
+				div /
+				a(href) shop
 		div.row
 			div.col-sm-3
 				section.section2
@@ -28,7 +28,7 @@ body
 						h3.section2_title product categories
 						mixin item(name, sum)
 							li
-								a(href).section2_subtitle=name
+								a(href="#").section2_subtitle=name
 								span.section2_sum=sum
 						ul
 							+item('Accessories','(26)')
@@ -50,8 +50,8 @@ body
 						h3.section2_title filter by color
 						mixin item(color, name, sum)
 							li
-								a(href).section2_color(style = "background: " + color)
-								a(href).section2_subtitle=name
+								a(href="#").section2_color(style = "background: " + color)
+								a(href="#").section2_subtitle=name
 								span.section2_sum=sum
 						ul
 							+item('#27BC9C','Turquoise','(26)')
