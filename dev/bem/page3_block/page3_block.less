@@ -9,10 +9,19 @@
 		background-color:  #f5f9fa;
 
 	}
-	&_block__page2 {
+	&_block__page2-rec {
 		width: 423px;
 		height: 530px;
+		position: relative;
+		// text-align: left;
+		// float: left;
 
+	}
+	&_block__page2-home{
+		width: 876px;
+		height: 550px;
+		background: lightgrey;
+		width: 100%;
 	}
 	&_text {
 		&__name {
@@ -22,14 +31,39 @@
 			line-height: 40px;
 			text-align: center;
 			padding-top: 20px;
+			&-home {
+				font-family: 'Playfair Display',sans-serif;
+				color:  #293341;
+				font-size: 30px;
+				font-weight: 700;
+				line-height: 35px;
+				text-align: center;
+			}
+			&-rec {
+				text-align: left;
+			}
 		}
+		&__subtitle {
+			color:  #293341;
+			font-size: 14px;
+			font-weight: 500;
+			text-align: left;
+			text-transform: uppercase;
+			text-align: center;
+
+		}
+		
 		&__price {
 		color: #7b7b7b;
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 40px;
 		text-align: center;
-		font-family: Poppins;
+		// font-family: Poppins;
+		&-rec {
+			text-align: left;
+			margin: 0;
+		}
 
 			.oldprice {
 				// color: #c91f28;
@@ -43,29 +77,20 @@
 			text-align: center;
 			padding-bottom: 30px;
 			color: #d8d8d8;
-			// .fa-star:hover ~ .fa-star,
-			// .fa-star:hover {
-			// 	color: yellow;
-			// }
 		}
 	}
-	&_text__page2 {
-		position: relative;
-		text-align: left;
-		float: left;
-		.item_text__price {
-			text-align: left;
-		}
-	}
+	
 	&_text__heart{
 			position: absolute;
-			top: 55px;
+			top: 563px;
 			right: 0;
-			bottom: 0;
+			bottom: 23px;
 			left: 400px;
 		}
-	
+
 }
+
+
 
 ul {
 	list-style-type: none;
