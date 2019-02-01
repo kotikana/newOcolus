@@ -27,6 +27,8 @@ html(lang='en')
 					span.prev-text_price $ 380.00
 			div.center-img.layout_product
 				.product_sl
+					.tooltip.tooltip__page3-sale sale
+					.tooltip.tooltip__page3-new new
 					.slider
 						.slider_slide
 							img.slider_img(src='img/sl1.jpg', alt='img')
@@ -132,9 +134,31 @@ html(lang='en')
 			div.prev-img
 				a(href="#")
 					img(src='img/04Slim-fit cotton shirt.jpg')
+		.tabs
+			ul.tabs_caption
+				li.tabs_title.active Description 
+				li.tabs_title Additional information
+				li.tabs_title  Reviews
+			.tabs_content.active
+				p.tabs_text
+					| Single-breasted jacket woven in a marled wool weave with narrow notch lapels, a decorative buttonhole and imitation suede elbow patches. Chest pocket, flap front pockets, two buttons at the front and decorative buttons at the cuffs. Partly lined. Slim fit that tapers at the chest and waist, which combined with slightly narrower sleeves creates a fitted silhouette.
+				p.tabs_text
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+			.tabs_content
+				p.tabs_text
+					| Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis cumque nihil ex velit quas cupiditate fugiat aliquid impedit? Exercitationem, eum.
+				p.tabs_text
+					| Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ad sunt animi. Earum incidunt quidem molestiae voluptatum rerum voluptates, maxime cupiditate eius minima iure excepturi laudantium quis consectetur reiciendis eum ex cum eligendi tenetur facere impedit quaerat quibusdam asperiores non odit? Impedit voluptas ex adipisci dolorem sit, hic architecto unde?
+			.tabs_content
+				p.tabs_text
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, magni sequi aut quasi vitae molestias doloremque in. Tenetur obcaecati, aliquid facere eligendi quod quo consequuntur aspernatur ratione sed amet cupiditate vel dolorum voluptatem unde porro nisi iste? Quibusdam, aliquid possimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt porro et qui obcaecati possimus eius. Deserunt illum sequi tempora, est nihil, voluptatem quasi debitis eveniet enim officia similique quo autem!
 		.favorite
-			h3.favourite_title
+			h3.favourite_title Selected Favourites
 				
+		.bought
+			h3.bought_title Others Also Bought
+
+		include ../../bem/page3_footer/page3_footer.pug
 
 			script( src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
 			
