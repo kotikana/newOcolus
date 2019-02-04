@@ -4,23 +4,27 @@
 @import url(../../general/libs/slick/slick_p_s.less);
 @import url(../../bem/alter_header/alter_header__less.less);
 @import url(../../bem/tooltip/tooltip.less);
+@import url(../../bem/page3_block/page3_block.less);
 //width content
 *{
 	margin: 0;
 	box-sizing:border-box;
+}
+body {
+	font-family: 'Poppins', sans-serif;
 }
 .layout_product{
 	max-width: 1170px;
 }
 
 //navigation
-.nav{
+.navigation{
 	height: 80px;
 	width: 100%;
 	background: #F9F9F9;
 	display: flex;
 	align-items: center;
-	padding-left: 390px;
+	padding-left: 19%;
 	margin-bottom: 50px;
 	&_link{
 		text-decoration: none;
@@ -45,9 +49,14 @@
 	background:  #f9f9f9;
 	border: 2px solid  #f9f9f9;
 	height: 104px;
+	&:hover .prev-text{
+		display: block;
+	}
 }
 .prev-text{
 	padding: 25px;
+	display: none;
+
 	&_item{
 		font:500 18px/30px 'Poppins', sans-serif;
 		color:  #293341;
@@ -82,7 +91,7 @@
 .next{
 	position: absolute;
 	right: 0;
-	bottom: 0;
+	bottom: 4px;
 }
 .product{
 	display: flex;
@@ -90,9 +99,11 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 80px;
+	margin-top: 50px;
 	&_sl{
 		display: flex;
 		flex-direction: column;
+		position: relative;
 	}
 }
 

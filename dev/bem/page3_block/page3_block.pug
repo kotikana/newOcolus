@@ -297,11 +297,76 @@
 		
 		]
 
+	var dataMixin_product = [
+		{
+			name: 'Slim-fit linen shirt',
+			subtitle: '',
+			price: '$25.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: true,
+			color_star: ['#ffbb04','#ffbb04','#ffbb04','','',],
+			img: 'img/04SelectedFavourites1.jpeg',
+			heart: false,
+			page: false,
+			button: false,
+		},
+		{
+			name: 'Slim-fit cotton shirt',
+			subtitle: '',
+			price: '$380.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: 'NEW',
+			rating: true,
+			color_star: ['#ffbb04','#ffbb04','','','',],
+			img: 'img/04SelectedFavourites2.jpeg',
+			heart: false,
+			page: false,
+			button: false,
+		},
+		{
+			name: 'Embroidered long dress',
+			subtitle: '',
+			price: '$605.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: true,
+			color_star: ['#ffbb04','#ffbb04','#ffbb04','','',],
+			img: 'img/04SelectedFavourites3.jpeg',
+			heart: false,
+			page: false,
+			button: false,
+		},
+		{
+			name: 'Puffed sleeves blouse',
+			subtitle: '',
+			price: '$19.95',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: 'NEW',
+			rating: true,
+			color_star: false,
+			img: 'img/04SelectedFavourites4.jpeg',
+			heart: false,
+			page: false,
+			button: false,
+		},
+	]
+
+
 mixin itemProduct(objItem)
 	//-зачем нужен класс item_grid и если нужен, то неправильное название. 
 	div.item.item_grid 
 		div.item_block(class = objItem.page == 1 ? "item_block__page2-rec" : 
-								objItem.page == 2 ? "item_block__page2-home" : "")
+								objItem.page == 2 ? "item_block__page2-home" :
+								objItem.page ==3 ? "item_block__product" : "")
 			a(href="#").ank
 				img(src="" + objItem.img)
 		div.item_text(class = objItem.page ==1 ? "item_text__page2-rec" : 
@@ -334,7 +399,7 @@ mixin itemGrid(dataMixin)
 	ul.row
 		each objItem in dataMixin
 			li.col.col-sm-4
-				+itemProduct(objItem)
+				+itemProduct(objItem).
 
 
 
@@ -350,11 +415,11 @@ mixin homepage_rec(dataMixin_homepage_rec)
 			li.col.col-sm-3
 				+itemProduct(objItem)
 
-// mixin product(dataMixin_product)
-// 	ul.row
-// 		each objItem in dataMixin_homepage
-// 			li.col.col-sm-3
-// 				+itemProduct(objItem)
+mixin product(dataMixin_product)
+	ul.row
+		each objItem in dataMixin_product
+			li.col.col-sm-3
+				+itemProduct(objItem)
 
 
 
