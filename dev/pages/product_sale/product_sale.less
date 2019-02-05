@@ -46,16 +46,19 @@ body {
 //section with slider
 .prev-img{
 	display: flex;
-	background:  #f9f9f9;
-	border: 2px solid  #f9f9f9;
+	
+	
 	height: 104px;
 	&:hover .prev-text{
 		display: block;
+		opacity: 1;
 	}
 }
 .prev-text{
 	padding: 25px;
-	display: none;
+	opacity: 0;
+	background:  #f9f9f9;
+	border: 2px solid  #f9f9f9;
 
 	&_item{
 		font:500 18px/30px 'Poppins', sans-serif;
@@ -91,7 +94,7 @@ body {
 .next{
 	position: absolute;
 	right: 0;
-	bottom: 4px;
+	bottom: 7px;
 }
 .product{
 	display: flex;
@@ -107,6 +110,26 @@ body {
 	}
 }
 
+.slider-button{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	background: lightgrey;
+	z-index: 2;
+	right: 15px;
+	top: 15px;
+	&_zoom,&_like,&_comp{
+		padding:15px;
+		border:0;
+		background: transparent;
+		outline: none;
+		cursor: pointer;
+		&:focus{
+			outline: none;
+		}
+	}
+
+}
 .choice{
 	padding-left: 30px;
 	display: flex;

@@ -2,11 +2,14 @@ doctype html
 html(lang='en')
 	head
 		title Ocolus Product on Sale
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" )
 		link(rel="stylesheet", href="dev/pages/product_sale/product_sale.css")
 		link(link rel="shortcut icon" href="img/img_service/favicon.ico" type="image/png")
 		link(rel="stylesheet", href="dev/general/fonts/fonts.css")
 		link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.6.3/css/all.css', integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/', crossorigin='anonymous')
-		//- link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous")
+		
+		//- link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+
 		
 	body
 		include ../../bem/alter_header/alter_header.pug
@@ -31,6 +34,13 @@ html(lang='en')
 				.product_sl
 					.tooltip.tooltip__page4-sale sale
 					.tooltip.tooltip__page4-new new
+					.slider-button
+						button(type="button").slider-button_zoom._zoom
+							img(src="img/img_service/Fullscreen.png", alt="")
+						button(type="button").slider-button_like._like
+							img(src="img/img_service/Heart.png", alt="" onclick="this.src = 'img/img_service/Heart-red.png'")
+						button(type="button").slider-button_comp._comp
+							img(src="img/img_service/Compare.png", alt="")
 					.slider
 						.slider_slide
 							img.slider_img(src='img/sl1.jpg', alt='img')
@@ -160,6 +170,8 @@ html(lang='en')
 			+itemGrid(dataMixin_product)
 		.bought
 			h3.bought_title Others Also Bought
+			include ../../bem/page3_block/page3_block.pug
+			+itemGrid(dataMixin_bought)
 
 		include ../../bem/page3_footer/page3_footer.pug
 
@@ -167,6 +179,7 @@ html(lang='en')
 			
 			script( src="dev/general/libs/slick/slick.js")
 			script( src="dev/general/libs/jquery.countdown.js")
+			//- script(src='//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
 			script( src="dev/pages/product_sale/product_sale.js")
 
 

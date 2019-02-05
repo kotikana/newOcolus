@@ -310,7 +310,7 @@
 			color_star: ['#ffbb04','#ffbb04','#ffbb04','','',],
 			img: 'img/04SelectedFavourites1.jpeg',
 			heart: false,
-			page: false,
+			page: 3,
 			button: false,
 		},
 		{
@@ -325,7 +325,7 @@
 			color_star: ['#ffbb04','#ffbb04','','','',],
 			img: 'img/04SelectedFavourites2.jpeg',
 			heart: false,
-			page: false,
+			page: 3,
 			button: false,
 		},
 		{
@@ -340,7 +340,7 @@
 			color_star: ['#ffbb04','#ffbb04','#ffbb04','','',],
 			img: 'img/04SelectedFavourites3.jpeg',
 			heart: false,
-			page: false,
+			page: 3,
 			button: false,
 		},
 		{
@@ -355,22 +355,87 @@
 			color_star: false,
 			img: 'img/04SelectedFavourites4.jpeg',
 			heart: false,
-			page: false,
+			page: 3,
 			button: false,
 		},
 	]
 
+	var dataMixin_bought = [
+		{
+			name: 'Collana Multifilo',
+			subtitle: '',
+			price: '$25.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: true,
+			color_star: ['#ffbb04','#ffbb04','#ffbb04','','',],
+			img: 'img/03shop1.jpg',
+			heart: false,
+			page: 4,
+			button: false,
+		},
+		{
+			name: 'The Arley In Wildfire',
+			subtitle: '',
+			price: '$185.00',
+			oldprice: '$380.00',
+			color: 'red',
+			fsale: 'sale',
+			fnew: 'new',
+			rating: true,
+			color_star: ['#ffbb04','#ffbb04','#ffbb04','#ffbb04','',],
+			img: 'img/03shop2.jpeg',
+			heart: false,
+			page: 4,
+			button: false,
+		},
+		{
+			name: 'Colorful Print',
+			subtitle: '',
+			price: '$605.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: true,
+			color_star: ['#ffbb04','#ffbb04','#ffbb04','','',],
+			img: 'img/03shop3.jpg',
+			heart: false,
+			page: 4,
+			button:  false,
+		},
+		{
+			name: 'Mini Sundress',
+			subtitle: '',
+			price: '$19.95',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: 'new',
+			rating: '',
+			color_star: ['','','','','',],
+			img: 'img/03shop4.jpg',
+			heart: false,
+			page: 4,
+			button: false,
+		},
+	]
 
 mixin itemProduct(objItem)
 	//-зачем нужен класс item_grid и если нужен, то неправильное название. 
 	div.item.item_grid 
 		div.item_block(class = objItem.page == 1 ? "item_block__page2-rec" : 
 								objItem.page == 2 ? "item_block__page2-home" :
-								objItem.page ==3 ? "item_block__product" : "")
+								objItem.page == 3 ? "item_block__product" :
+								objItem.page == 4 ? "item_block__other" :"")
 			a(href="#").ank
 				img(src="" + objItem.img)
 		div.item_text(class = objItem.page ==1 ? "item_text__page2-rec" : 
-								objItem.page == 2 ? "item_text__page2-home" : "")
+								objItem.page == 2 ? "item_text__page2-home" : 
+								objItem.page == 3 ? "item_text__product" :
+								objItem.page == 4 ? "item_text__other" :"")
 			div.item_text__name(class = objItem.page ==1 ? "item_text__name-rec" :
 										objItem.page == 2 ? "item_text__name-home" : "")=objItem.name
 			div.item_text__subtitle=objItem.subtitle
@@ -418,6 +483,12 @@ mixin homepage_rec(dataMixin_homepage_rec)
 mixin product(dataMixin_product)
 	ul.row
 		each objItem in dataMixin_product
+			li.col.col-sm-3
+				+itemProduct(objItem)
+
+mixin other(dataMixin_other)
+	ul.row
+		each objItem in dataMixin_other
 			li.col.col-sm-3
 				+itemProduct(objItem)
 

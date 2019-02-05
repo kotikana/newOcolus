@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Ocolus Product on Sale</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="dev/pages/product_sale/product_sale.css">
     <link link rel="shortcut icon" href="img/img_service/favicon.ico" type="image/png">
     <link rel="stylesheet" href="dev/general/fonts/fonts.css">
@@ -44,6 +45,11 @@
         <div class="product_sl">
           <div class="tooltip tooltip__page4-sale">sale</div>
           <div class="tooltip tooltip__page4-new">new</div>
+          <div class="slider-button">
+            <button class="slider-button_zoom _zoom" type="button"><img src="img/img_service/Fullscreen.png" alt=""></button>
+            <button class="slider-button_like _like" type="button"><img src="img/img_service/Heart.png" alt="" onclick="this.src = 'img/img_service/Heart-red.png'"></button>
+            <button class="slider-button_comp _comp" type="button"><img src="img/img_service/Compare.png" alt=""></button>
+          </div>
           <div class="slider">
             <div class="slider_slide"><img class="slider_img" src="img/sl1.jpg" alt="img"></div>
             <div class="slider_slide"><img class="slider_img" src="img/sl2.jpg" alt="img"></div>
@@ -143,8 +149,8 @@
             <ul class="row">
               <li class="col col-sm-4">
                       <div class="item item_grid"> 
-                        <div class="item_block"><a class="ank" href="#"><img src="img/04SelectedFavourites1.jpeg"></a></div>
-                        <div class="item_text">
+                        <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04SelectedFavourites1.jpeg"></a></div>
+                        <div class="item_text item_text__product">
                           <div class="item_text__name">Slim-fit linen shirt</div>
                           <div class="item_text__subtitle"></div>
                           <div class="item_text__price"><span class="newprice" style="color: ">$25.00</span><span class="oldprice"></span></div>
@@ -163,8 +169,8 @@
               </li>
               <li class="col col-sm-4">
                       <div class="item item_grid"> 
-                        <div class="item_block"><a class="ank" href="#"><img src="img/04SelectedFavourites2.jpeg"></a></div>
-                        <div class="item_text">
+                        <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04SelectedFavourites2.jpeg"></a></div>
+                        <div class="item_text item_text__product">
                           <div class="item_text__name">Slim-fit cotton shirt</div>
                           <div class="item_text__subtitle"></div>
                           <div class="item_text__price"><span class="newprice" style="color: ">$380.00</span><span class="oldprice"></span></div>
@@ -183,8 +189,8 @@
               </li>
               <li class="col col-sm-4">
                       <div class="item item_grid"> 
-                        <div class="item_block"><a class="ank" href="#"><img src="img/04SelectedFavourites3.jpeg"></a></div>
-                        <div class="item_text">
+                        <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04SelectedFavourites3.jpeg"></a></div>
+                        <div class="item_text item_text__product">
                           <div class="item_text__name">Embroidered long dress</div>
                           <div class="item_text__subtitle"></div>
                           <div class="item_text__price"><span class="newprice" style="color: ">$605.00</span><span class="oldprice"></span></div>
@@ -203,8 +209,8 @@
               </li>
               <li class="col col-sm-4">
                       <div class="item item_grid"> 
-                        <div class="item_block"><a class="ank" href="#"><img src="img/04SelectedFavourites4.jpeg"></a></div>
-                        <div class="item_text">
+                        <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04SelectedFavourites4.jpeg"></a></div>
+                        <div class="item_text item_text__product">
                           <div class="item_text__name">Puffed sleeves blouse</div>
                           <div class="item_text__subtitle"></div>
                           <div class="item_text__price"><span class="newprice" style="color: ">$19.95</span><span class="oldprice"></span></div>
@@ -225,6 +231,88 @@
     </div>
     <div class="bought">
       <h3 class="bought_title">Others Also Bought</h3>
+            <ul class="row">
+              <li class="col col-sm-4">
+                      <div class="item item_grid"> 
+                        <div class="item_block item_block__other"><a class="ank" href="#"><img src="img/03shop1.jpg"></a></div>
+                        <div class="item_text item_text__other">
+                          <div class="item_text__name">Collana Multifilo</div>
+                          <div class="item_text__subtitle"></div>
+                          <div class="item_text__price"><span class="newprice" style="color: ">$25.00</span><span class="oldprice"></span></div>
+                          <div class="item_text__rating"><i class="fa fa-star" style="color: #ffbb04"></i><i class="fa fa-star" style="color: #ffbb04"></i><i class="fa fa-star" style="color: #ffbb04"></i><i class="fa fa-star" style="color: "></i><i class="fa fa-star" style="color: "></i>
+                          </div>
+                          <div class="item_text__heart">
+                          </div>
+                        </div>
+                        <div class="tooltip tooltip__page3">
+                          <div class="tooltip__page3-sale"></div>
+                          <!-- div.tooltip__page3-new=objItem.fnew-->
+                          <!-- было это условие , переписала под наш с Лешей флажок-->
+                          <div class="tooltip__page3-new"></div>
+                        </div>
+                      </div>
+              </li>
+              <li class="col col-sm-4">
+                      <div class="item item_grid"> 
+                        <div class="item_block item_block__other"><a class="ank" href="#"><img src="img/03shop2.jpeg"></a></div>
+                        <div class="item_text item_text__other">
+                          <div class="item_text__name">The Arley In Wildfire</div>
+                          <div class="item_text__subtitle"></div>
+                          <div class="item_text__price"><span class="newprice" style="color: red">$185.00</span><span class="oldprice">$380.00</span></div>
+                          <div class="item_text__rating"><i class="fa fa-star" style="color: #ffbb04"></i><i class="fa fa-star" style="color: #ffbb04"></i><i class="fa fa-star" style="color: #ffbb04"></i><i class="fa fa-star" style="color: #ffbb04"></i><i class="fa fa-star" style="color: "></i>
+                          </div>
+                          <div class="item_text__heart">
+                          </div>
+                        </div>
+                        <div class="tooltip tooltip__page3">
+                          <div class="tooltip__page3-sale">sale</div>
+                          <!-- div.tooltip__page3-new=objItem.fnew-->
+                          <!-- было это условие , переписала под наш с Лешей флажок-->
+                          <div class="tooltip__page3-new">new</div>
+                        </div>
+                      </div>
+              </li>
+              <li class="col col-sm-4">
+                      <div class="item item_grid"> 
+                        <div class="item_block item_block__other"><a class="ank" href="#"><img src="img/03shop3.jpg"></a></div>
+                        <div class="item_text item_text__other">
+                          <div class="item_text__name">Colorful Print</div>
+                          <div class="item_text__subtitle"></div>
+                          <div class="item_text__price"><span class="newprice" style="color: ">$605.00</span><span class="oldprice"></span></div>
+                          <div class="item_text__rating"><i class="fa fa-star" style="color: #ffbb04"></i><i class="fa fa-star" style="color: #ffbb04"></i><i class="fa fa-star" style="color: #ffbb04"></i><i class="fa fa-star" style="color: "></i><i class="fa fa-star" style="color: "></i>
+                          </div>
+                          <div class="item_text__heart">
+                          </div>
+                        </div>
+                        <div class="tooltip tooltip__page3">
+                          <div class="tooltip__page3-sale"></div>
+                          <!-- div.tooltip__page3-new=objItem.fnew-->
+                          <!-- было это условие , переписала под наш с Лешей флажок-->
+                          <div class="tooltip__page3-new"></div>
+                        </div>
+                      </div>
+              </li>
+              <li class="col col-sm-4">
+                      <div class="item item_grid"> 
+                        <div class="item_block item_block__other"><a class="ank" href="#"><img src="img/03shop4.jpg"></a></div>
+                        <div class="item_text item_text__other">
+                          <div class="item_text__name">Mini Sundress</div>
+                          <div class="item_text__subtitle"></div>
+                          <div class="item_text__price"><span class="newprice" style="color: ">$19.95</span><span class="oldprice"></span></div>
+                          <div class="item_text__rating">
+                          </div>
+                          <div class="item_text__heart">
+                          </div>
+                        </div>
+                        <div class="tooltip tooltip__page3">
+                          <div class="tooltip__page3-sale"></div>
+                          <!-- div.tooltip__page3-new=objItem.fnew-->
+                          <!-- было это условие , переписала под наш с Лешей флажок-->
+                          <div class="tooltip__page3-new">new</div>
+                        </div>
+                      </div>
+              </li>
+            </ul>
     </div>
     <section class="page3_footer">
       <div class="footer_block">
