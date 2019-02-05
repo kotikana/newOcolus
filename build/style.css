@@ -768,7 +768,11 @@ a {
   background-color: #f5f9fa;
 }
 .item_block__product {
-  height: 470px;
+  height: 368px;
+  width: 260px;
+}
+.item_block__other {
+  height: 368px;
   width: 260px;
 }
 .item_block__page2-rec {
@@ -808,6 +812,11 @@ a {
   text-align: left;
   text-transform: uppercase;
   text-align: center;
+}
+.item_text__product,
+.item_text__other {
+  width: 260px;
+  height: 140px;
 }
 .item_text__price {
   color: #7b7b7b;
@@ -863,11 +872,10 @@ ul {
   -ms-flex-pack: center;
   justify-content: center;
   border-top: 1px solid #eeeeee;
-  padding: 68px 0;
   width: 100%;
 }
 .page3_footer .footer_block {
-  padding: 30px;
+  padding: 68px 30px;
 }
 .page3_footer .footer_block__logo {
   padding-bottom: 30px;
