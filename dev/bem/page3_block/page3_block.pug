@@ -149,7 +149,7 @@
 			fnew: '',
 			rating: '',
 			color_star: '',
-			img: 'img/new1',  // 'img/02Salt & Pepper Bottle Grinders.jpg',
+			img: 'img/02Salt-Pepper-Bottle-Grinder-by-Norm-Architects-3.jpg',  // 'img/02Salt & Pepper Bottle Grinders.jpg',
 			
 			heart: false,
 			page: 2,
@@ -165,7 +165,7 @@
 			fnew: '',
 			rating: '',
 			color_star: '',
-			img: 'img/new2', //'img/02Restore storage basket.jpeg',
+			img: 'img/02BASKET.jpg', //'img/02Restore storage basket.jpeg',
 			heart: false,
 			page: 2,
 			button: false,
@@ -180,7 +180,7 @@
 			fnew: '',
 			rating: ' ',
 			color_star: '',
-			img: 'img/new3', //'img/02Gubi Adnet Circulaire Mirror Tan.jpg',
+			img: 'img/02Mirrors-in-tan-leather.jpg', //'img/02Gubi Adnet Circulaire Mirror Tan.jpg',
 			heart: false,
 			page: 2,
 			button: false,
@@ -195,7 +195,7 @@
 			fnew: '',
 			rating: '',
 			color_star: '',
-			img: 'img/new4',//'img/02Ferm Living Hexagon Pot Brass.jpg',
+			img: 'img/02Ferm-Living-Hexagon-Pot-Brass-3.jpg',//'img/02Ferm Living Hexagon Pot Brass.jpg',
 			heart: false,
 			page: 2,
 			button: false,
@@ -371,9 +371,9 @@
 			fnew: '',
 			rating: true,
 			color_star: ['#ffbb04','#ffbb04','#ffbb04','','',],
-			img: 'img/03shop1.jpg',
+			img: 'img/04alsoBought1.jpg',
 			heart: false,
-			page: 4,
+			page: 3,
 			button: false,
 		},
 		{
@@ -386,9 +386,9 @@
 			fnew: 'new',
 			rating: true,
 			color_star: ['#ffbb04','#ffbb04','#ffbb04','#ffbb04','',],
-			img: 'img/03shop2.jpeg',
+			img: 'img/04alsoBought2.jpg',
 			heart: false,
-			page: 4,
+			page: 3,
 			button: false,
 		},
 		{
@@ -401,9 +401,9 @@
 			fnew: '',
 			rating: true,
 			color_star: ['#ffbb04','#ffbb04','#ffbb04','','',],
-			img: 'img/03shop3.jpg',
+			img: 'img/04alsoBought3.jpg',
 			heart: false,
-			page: 4,
+			page: 3,
 			button:  false,
 		},
 		{
@@ -416,9 +416,9 @@
 			fnew: 'new',
 			rating: '',
 			color_star: ['','','','','',],
-			img: 'img/03shop4.jpg',
+			img: 'img/04alsoBought4.jpg',
 			heart: false,
-			page: 4,
+			page: 3,
 			button: false,
 		},
 	]
@@ -428,14 +428,12 @@ mixin itemProduct(objItem)
 	div.item.item_grid 
 		div.item_block(class = objItem.page == 1 ? "item_block__page2-rec" : 
 								objItem.page == 2 ? "item_block__page2-home" :
-								objItem.page == 3 ? "item_block__product" :
-								objItem.page == 4 ? "item_block__other" :"")
+								objItem.page == 3 ? "item_block__product" : "")
 			a(href="#").ank
 				img(src="" + objItem.img)
 		div.item_text(class = objItem.page ==1 ? "item_text__page2-rec" : 
 								objItem.page == 2 ? "item_text__page2-home" : 
-								objItem.page == 3 ? "item_text__product" :
-								objItem.page == 4 ? "item_text__other" :"")
+								objItem.page == 3 ? "item_text__product" :"")
 			div.item_text__name(class = objItem.page ==1 ? "item_text__name-rec" :
 										objItem.page == 2 ? "item_text__name-home" : "")=objItem.name
 			div.item_text__subtitle=objItem.subtitle
@@ -479,20 +477,5 @@ mixin homepage_rec(dataMixin_homepage_rec)
 		each objItem in dataMixin_homepage_rec
 			li.col.col-sm-3
 				+itemProduct(objItem)
-
-mixin product(dataMixin_product)
-	ul.row
-		each objItem in dataMixin_product
-			li.col.col-sm-3
-				+itemProduct(objItem)
-
-mixin other(dataMixin_other)
-	ul.row
-		each objItem in dataMixin_other
-			li.col.col-sm-3
-				+itemProduct(objItem)
-
-
-
 
 

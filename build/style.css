@@ -706,6 +706,7 @@ a {
   color: white;
   text-transform: uppercase;
   margin-left: 15px;
+  border: 0;
 }
 .button__filter-price {
   width: 100px;
@@ -720,7 +721,6 @@ a {
   background: darkgrey;
   -webkit-box-shadow: 2px 2px grey;
   box-shadow: 2px 2px grey;
-  top: 2px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -728,7 +728,6 @@ a {
 .button__product:active {
   -webkit-box-shadow: 0 0 grey;
   box-shadow: 0 0 grey;
-  top: 6px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -744,7 +743,6 @@ a {
   background: lightgrey;
   -webkit-box-shadow: 2px 2px grey;
   box-shadow: 2px 2px grey;
-  top: 2px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -752,7 +750,26 @@ a {
 .button:active {
   -webkit-box-shadow: 0 0 grey;
   box-shadow: 0 0 grey;
-  top: 6px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.button__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.button__close:hover {
+  background: lightgrey;
+  -webkit-box-shadow: 2px 2px grey;
+  box-shadow: 2px 2px grey;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.button__close:active {
+  -webkit-box-shadow: 0 0 grey;
+  box-shadow: 0 0 grey;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;

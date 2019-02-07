@@ -46,9 +46,9 @@
           <div class="tooltip tooltip__page4-sale">sale</div>
           <div class="tooltip tooltip__page4-new">new</div>
           <div class="slider-button">
-            <button class="slider-button_zoom _zoom" type="button"><img src="img/img_service/Fullscreen.png" alt=""></button>
+            <button class="_show_popup slider-button_zoom" data-popup="#popup"><img src="img/img_service/Fullscreen.png" alt=""></button>
             <button class="slider-button_like _like" type="button"><img src="img/img_service/Heart.png" alt="" onclick="this.src = 'img/img_service/Heart-red.png'"></button>
-            <button class="slider-button_comp _comp" type="button"><img src="img/img_service/Compare.png" alt=""></button>
+            <button class="slider-button_comp" type="button"><img src="img/img_service/Compare.png" alt=""></button>
           </div>
           <div class="slider">
             <div class="slider_slide"><img class="slider_img" src="img/sl1.jpg" alt="img"></div>
@@ -124,7 +124,9 @@
           </form>
         </div>
       </div>
-      <div class="prev-img"><a href="#"><img src="img/04Slim-fit cotton shirt.jpg"></a></div>
+      <div class="prev-img">
+        <div class="prev-text"><span class="prev-text_item">Classics Automatic<br></span><span class="prev-text_price">$ 19.99</span></div><a href="#"><img src="img/04small.jpg"></a>
+      </div>
     </div>
     <div class="tabs">
       <ul class="tabs_caption">
@@ -144,10 +146,10 @@
         <p class="tabs_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, magni sequi aut quasi vitae molestias doloremque in. Tenetur obcaecati, aliquid facere eligendi quod quo consequuntur aspernatur ratione sed amet cupiditate vel dolorum voluptatem unde porro nisi iste? Quibusdam, aliquid possimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt porro et qui obcaecati possimus eius. Deserunt illum sequi tempora, est nihil, voluptatem quasi debitis eveniet enim officia similique quo autem!</p>
       </div>
     </div>
-    <div class="favorite layout_product">
+    <div class="favourite layout_product">
       <h3 class="favourite_title">Selected Favourites</h3>
             <ul class="row">
-              <li class="col col-sm-4">
+              <li class="col col-sm-3">
                       <div class="item item_grid"> 
                         <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04SelectedFavourites1.jpeg"></a></div>
                         <div class="item_text item_text__product">
@@ -167,7 +169,7 @@
                         </div>
                       </div>
               </li>
-              <li class="col col-sm-4">
+              <li class="col col-sm-3">
                       <div class="item item_grid"> 
                         <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04SelectedFavourites2.jpeg"></a></div>
                         <div class="item_text item_text__product">
@@ -187,7 +189,7 @@
                         </div>
                       </div>
               </li>
-              <li class="col col-sm-4">
+              <li class="col col-sm-3">
                       <div class="item item_grid"> 
                         <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04SelectedFavourites3.jpeg"></a></div>
                         <div class="item_text item_text__product">
@@ -207,7 +209,7 @@
                         </div>
                       </div>
               </li>
-              <li class="col col-sm-4">
+              <li class="col col-sm-3">
                       <div class="item item_grid"> 
                         <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04SelectedFavourites4.jpeg"></a></div>
                         <div class="item_text item_text__product">
@@ -229,13 +231,13 @@
               </li>
             </ul>
     </div>
-    <div class="bought">
+    <div class="bought layout_product">
       <h3 class="bought_title">Others Also Bought</h3>
             <ul class="row">
-              <li class="col col-sm-4">
+              <li class="col col-sm-3">
                       <div class="item item_grid"> 
-                        <div class="item_block item_block__other"><a class="ank" href="#"><img src="img/03shop1.jpg"></a></div>
-                        <div class="item_text item_text__other">
+                        <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04alsoBought1.jpg"></a></div>
+                        <div class="item_text item_text__product">
                           <div class="item_text__name">Collana Multifilo</div>
                           <div class="item_text__subtitle"></div>
                           <div class="item_text__price"><span class="newprice" style="color: ">$25.00</span><span class="oldprice"></span></div>
@@ -252,10 +254,10 @@
                         </div>
                       </div>
               </li>
-              <li class="col col-sm-4">
+              <li class="col col-sm-3">
                       <div class="item item_grid"> 
-                        <div class="item_block item_block__other"><a class="ank" href="#"><img src="img/03shop2.jpeg"></a></div>
-                        <div class="item_text item_text__other">
+                        <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04alsoBought2.jpg"></a></div>
+                        <div class="item_text item_text__product">
                           <div class="item_text__name">The Arley In Wildfire</div>
                           <div class="item_text__subtitle"></div>
                           <div class="item_text__price"><span class="newprice" style="color: red">$185.00</span><span class="oldprice">$380.00</span></div>
@@ -272,10 +274,10 @@
                         </div>
                       </div>
               </li>
-              <li class="col col-sm-4">
+              <li class="col col-sm-3">
                       <div class="item item_grid"> 
-                        <div class="item_block item_block__other"><a class="ank" href="#"><img src="img/03shop3.jpg"></a></div>
-                        <div class="item_text item_text__other">
+                        <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04alsoBought3.jpg"></a></div>
+                        <div class="item_text item_text__product">
                           <div class="item_text__name">Colorful Print</div>
                           <div class="item_text__subtitle"></div>
                           <div class="item_text__price"><span class="newprice" style="color: ">$605.00</span><span class="oldprice"></span></div>
@@ -292,10 +294,10 @@
                         </div>
                       </div>
               </li>
-              <li class="col col-sm-4">
+              <li class="col col-sm-3">
                       <div class="item item_grid"> 
-                        <div class="item_block item_block__other"><a class="ank" href="#"><img src="img/03shop4.jpg"></a></div>
-                        <div class="item_text item_text__other">
+                        <div class="item_block item_block__product"><a class="ank" href="#"><img src="img/04alsoBought4.jpg"></a></div>
+                        <div class="item_text item_text__product">
                           <div class="item_text__name">Mini Sundress</div>
                           <div class="item_text__subtitle"></div>
                           <div class="item_text__price"><span class="newprice" style="color: ">$19.95</span><span class="oldprice"></span></div>
@@ -332,13 +334,17 @@
         <div>Terms</div>
         <div>Privacy</div>
         <div>Returns</div>
-        <div>Track Order
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-          <script src="dev/general/libs/slick/slick.js"></script>
-          <script src="dev/general/libs/jquery.countdown.js"></script>
-          <script src="dev/pages/product_sale/product_sale.js"></script>
-        </div>
+        <div>Track Order</div>
       </div>
     </section>
+    <div class="popup" id="popup">
+      <div class="inner">
+        <button class="button button__close _btn_close">Close</button>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script src="dev/general/libs/slick/slick.js"></script>
+      <script src="dev/general/libs/jquery.countdown.js"></script>
+      <script src="dev/pages/product_sale/product_sale.js"></script>
+    </div>
   </body>
 </html>

@@ -35,11 +35,11 @@ html(lang='en')
 					.tooltip.tooltip__page4-sale sale
 					.tooltip.tooltip__page4-new new
 					.slider-button
-						button(type="button").slider-button_zoom._zoom
+						button._show_popup.slider-button_zoom(data-popup='#popup')
 							img(src="img/img_service/Fullscreen.png", alt="")
 						button(type="button").slider-button_like._like
 							img(src="img/img_service/Heart.png", alt="" onclick="this.src = 'img/img_service/Heart-red.png'")
-						button(type="button").slider-button_comp._comp
+						button(type="button").slider-button_comp
 							img(src="img/img_service/Compare.png", alt="")
 					.slider
 						.slider_slide
@@ -144,8 +144,11 @@ html(lang='en')
 									a.social_link(href="#")
 
 			div.prev-img
+				div.prev-text
+					span.prev-text_item Classics Automatic<br>
+					span.prev-text_price $ 19.99
 				a(href="#")
-					img(src='img/04Slim-fit cotton shirt.jpg')
+					img(src='img/04small.jpg')
 		.tabs
 			ul.tabs_caption
 				li.tabs_title.active Description 
@@ -164,16 +167,22 @@ html(lang='en')
 			.tabs_content
 				p.tabs_text
 					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, magni sequi aut quasi vitae molestias doloremque in. Tenetur obcaecati, aliquid facere eligendi quod quo consequuntur aspernatur ratione sed amet cupiditate vel dolorum voluptatem unde porro nisi iste? Quibusdam, aliquid possimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt porro et qui obcaecati possimus eius. Deserunt illum sequi tempora, est nihil, voluptatem quasi debitis eveniet enim officia similique quo autem!
-		.favorite.layout_product
+		.favourite.layout_product
 			h3.favourite_title Selected Favourites
 			include ../../bem/page3_block/page3_block.pug
-			+itemGrid(dataMixin_product)
-		.bought
+			+homepage_rec(dataMixin_product)
+		.bought.layout_product
 			h3.bought_title Others Also Bought
 			include ../../bem/page3_block/page3_block.pug
-			+itemGrid(dataMixin_bought)
+			+homepage_rec(dataMixin_bought)
 
 		include ../../bem/page3_footer/page3_footer.pug
+		#popup.popup
+			.inner
+
+				button.button.button__close._btn_close Close
+
+
 
 			script( src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
 			
@@ -181,6 +190,5 @@ html(lang='en')
 			script( src="dev/general/libs/jquery.countdown.js")
 			//- script(src='//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
 			script( src="dev/pages/product_sale/product_sale.js")
-
 
 
