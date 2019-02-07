@@ -71,9 +71,14 @@ $(document).ready(function(){
 })(jQuery);
 
 //popup
+
 $(function() {
+	
 $('._show_popup').click(function () {
-	$($(this).data('popup')).fadeIn();
+	var current=$('.slick-current').find('.slider_img');
+current.clone().appendTo('.inner' );
+$($(this).data('popup')).fadeIn();
+
 });
 
 $('._btn_close').click(function () {
@@ -88,6 +93,5 @@ $('.popup .inner').click(function (e) {
 	e.stopPropagation();
 });
 
-$('.slick-current').find('.slider_img').clone().appendTo('.inner' );
 
 });
