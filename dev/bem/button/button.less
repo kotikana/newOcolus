@@ -3,6 +3,7 @@
 	color: white;
 	text-transform: uppercase;
 	margin-left: 15px;
+	border:0;
 	&__filter-price {
 		width: 100px;
 		height: 45px;
@@ -14,12 +15,10 @@
 		&:hover {
 		background: darkgrey;
 		box-shadow: 2px 2px grey;
-		top: 2px;
 		transition: 0.3s;
 	}
 	&:active {
 		box-shadow: 0 0 grey;
-		top: 6px;
 		transition: 0.3s;
 		
 	}
@@ -30,18 +29,15 @@
 		background: transparent;
 		color:  #23232c;
 		margin:15px 0 ;
-	}
 	&:hover {
 		background: lightgrey;
 		box-shadow: 2px 2px grey;
-		top: 2px;
 		transition: 0.3s;
 	}
 	&:active {
 		box-shadow: 0 0 grey;
-		top: 6px;
 		transition: 0.3s;
-		
+    }
 	}
 	
 	&__p-cont-submit {
@@ -50,4 +46,21 @@
 		letter-spacing: 3px;
 	}
 
+	&__close{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		&:hover {
+			background: lightgrey;
+			box-shadow: 2px 2px grey;
+			transition: 0.3s;
+		}
+		&:active {
+			box-shadow: 0 0 grey;
+			transition: 0.3s;
+
+		}
+	}
 }
+
+
