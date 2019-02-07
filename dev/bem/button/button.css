@@ -13,6 +13,23 @@
   border: 0;
   outline: 0;
 }
+.button__product:hover {
+  background: darkgrey;
+  -webkit-box-shadow: 2px 2px grey;
+  box-shadow: 2px 2px grey;
+  top: 2px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.button__product:active {
+  -webkit-box-shadow: 0 0 grey;
+  box-shadow: 0 0 grey;
+  top: 6px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
 .button__buy {
   padding: 20px 130px;
   border: 2px solid #23232c;
@@ -36,4 +53,9 @@
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+.button__p-cont-submit {
+  padding: 22px 37px;
+  font: 500 14px 'Poppins', sans-serif;
+  letter-spacing: 3px;
 }
