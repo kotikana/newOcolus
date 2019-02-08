@@ -436,6 +436,7 @@ a {
 }
 .instagram_block-photo {
   position: relative;
+  margin-right: 10px;
 }
 .instagram_block-photo .fab {
   color: #ffffff;
@@ -739,7 +740,7 @@ a {
   color: #23232c;
   margin: 15px 0 ;
 }
-.button:hover {
+.button__buy:hover {
   background: lightgrey;
   -webkit-box-shadow: 2px 2px grey;
   box-shadow: 2px 2px grey;
@@ -747,12 +748,17 @@ a {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-.button:active {
+.button__buy:active {
   -webkit-box-shadow: 0 0 grey;
   box-shadow: 0 0 grey;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+.button__p-cont-submit {
+  padding: 22px 37px;
+  font: 500 14px 'Poppins', sans-serif;
+  letter-spacing: 3px;
 }
 .button__close {
   position: absolute;
@@ -782,7 +788,6 @@ a {
   background-color: white;
   height: 598px;
   width: 435px;
-  background-color: #f5f9fa;
 }
 .item_block__product {
   height: 368px;
@@ -793,12 +798,11 @@ a {
   width: 260px;
 }
 .item_block__page2-rec {
-  width: 423px;
+  width: 420px;
   height: 530px;
   position: relative;
 }
 .item_block__page2-home {
-  width: 876px;
   height: 550px;
   background: lightgrey;
   width: 100%;
