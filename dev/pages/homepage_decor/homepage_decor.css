@@ -188,6 +188,7 @@ a {
 }
 .instagram_block-photo {
   position: relative;
+  margin-right: 10px;
 }
 .instagram_block-photo .fab {
   color: #ffffff;
