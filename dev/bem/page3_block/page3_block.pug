@@ -423,6 +423,69 @@
 		},
 	]
 
+	var dataMixin_searchResult = [
+		{
+			name: 'Ruffled dress',
+			subtitle: '',
+			price: '$45.00',
+			oldprice: '90.00',
+			color: 'red',
+			fsale: 'sale',
+			fnew: '',
+			rating: '',
+			color_star: ['','','','','',],
+			img: 'img/05result1.jpg',
+			heart: true,
+			page: 3,
+			button: false,
+		},
+		{
+			name: 'TOversized Sweatshirt In Pink',
+			subtitle: '',
+			price: '$250.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: '',
+			color_star: ['','','','','',],
+			img: 'img/05result2.jpg',
+			heart: true,
+			page: 3,
+			button: false,
+		},
+		{
+			name: 'Slim-fit medium wash Tim jeans',
+			subtitle: '',
+			price: '$362.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: 'new',
+			rating: '',
+			color_star: ['','','','','',],
+			img: 'img/05result3.jpg',
+			heart: true,
+			page: 3,
+			button:  false,
+		},
+		{
+			name: 'Sleeveless T-Shirt With Dropped Armhole',
+			subtitle: '',
+			price: '$100.00',
+			oldprice: '',
+			color: '',
+			fsale: '',
+			fnew: '',
+			rating: '',
+			color_star: ['','','','','',],
+			img: 'img/05result4.jpg',
+			heart: true,
+			page: 3,
+			button: false,
+		},
+	]
+
 mixin itemProduct(objItem)
 	//-зачем нужен класс item_grid и если нужен, то неправильное название. 
 	div.item.item_grid 
@@ -433,7 +496,8 @@ mixin itemProduct(objItem)
 				img(src="" + objItem.img)
 		div.item_text(class = objItem.page ==1 ? "item_text__page2-rec" : 
 								objItem.page == 2 ? "item_text__page2-home" : 
-								objItem.page == 3 ? "item_text__product" :"")
+								objItem.page == 3 ? "item_text__product" : 
+								objItem.page == 5 ? "item_text__p-search" :"")
 			div.item_text__name(class = objItem.page ==1 ? "item_text__name-rec" :
 										objItem.page == 2 ? "item_text__name-home" : "")=objItem.name
 			div.item_text__subtitle=objItem.subtitle
@@ -454,7 +518,8 @@ mixin itemProduct(objItem)
 			div.tooltip__page3-sale=objItem.fsale
 			// div.tooltip__page3-new=objItem.fnew
 			// было это условие , переписала под наш с Лешей флажок
-			div(class = objItem.page == 1 ? "tooltip__page2" : "tooltip__page3-new")=objItem.fnew
+			div(class = objItem.page == 1  ? "tooltip__page2" : 
+						objItem.page == 5  ? "tooltip__page2" : "tooltip__page3-new")=objItem.fnew
 	if objItem.button == true
 		button.home_button.home_button__rec add to cart ->
 
