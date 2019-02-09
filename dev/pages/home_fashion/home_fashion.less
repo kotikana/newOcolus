@@ -8,7 +8,7 @@
 	margin: 0 auto;
 }
 
-
+//navigation
 .header{
 	border-bottom: 1px solid #EEEEEE;
 	color:  #7b7b7b;
@@ -18,7 +18,6 @@
 		align-items: center;
 		border-bottom: 1px solid #EEEEEE;
 		height: 50px;
-
 	}
 	&_down{
 		display: flex;
@@ -35,7 +34,6 @@
 		}
 	}
 }
-
 .basket{
 	padding-right: 19%;
 }
@@ -87,9 +85,13 @@
 	}
 	
 	&_item{
-		margin:0 15px;
+		padding:5px 15px;
 		cursor: pointer;
 		letter-spacing: 1px;
+		&:hover {
+			text-shadow: 1px 1px 0 #7F8285, 2px 2px 0 #686D6E ;
+			transform: translate(-2px, -2px);
+		}
 	}
 	&_item__footer{
 		margin:0 40px;
@@ -102,7 +104,7 @@
 	padding-left: 15px;
 }
 
-
+//main gallery
 .main{
 	&_title{
 		font: 400 35px/40px 'Playfair Display', serif;
@@ -130,6 +132,8 @@
 		}
 	}
 }
+
+//footer
 .footer{
 	display: flex;
 	flex-direction: column;
@@ -164,11 +168,15 @@
 		padding:10px 20px;
 		border:1px solid #EEEEEE;
 		width: 500px;
+		outline: 0;
 		&:valid:not(:placeholder-shown) {
 			border-color: green;
 		}
 		&:invalid:not(:placeholder-shown) {
 			border-color: red;
+		}
+		&:focus{
+			outline: 1px solid grey;
 		}
 	}
 	&_button{
@@ -177,6 +185,20 @@
 		padding: 10px 60px;
 		background: white;
 		border:1px solid #EEEEEE;
+		outline: none;
+		&:hover {
+			background: lightgrey;
+			box-shadow: 2px 2px grey;
+			top: 2px;
+			transition: 0.3s;
+			outline: none;
+		}
+		&:active {
+			box-shadow: 0 0 grey;
+			top: 6px;
+			transition: 0.3s;
+			outline: none;
+		}
 	}
 
 }
