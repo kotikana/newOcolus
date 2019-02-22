@@ -1006,6 +1006,13 @@ ul {
   padding-left: 50px;
   color: #293341;
 }
+.alterhead_choice:hover {
+  color: #7b7b7b;
+  text-shadow: 1px 1px 0 #7F8285;
+  -webkit-transform: translate(-1px, -1px);
+  -ms-transform: translate(-1px, -1px);
+  transform: translate(-1px, -1px);
+}
 .alterhead_last_choise {
   padding-right: 20px;
   color: red;

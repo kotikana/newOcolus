@@ -502,22 +502,17 @@ mixin itemProduct(objItem)
 										objItem.page == 2 ? "item_text__name-home" : "")=objItem.name
 			div.item_text__subtitle=objItem.subtitle
 			div.item_text__price(class = objItem.page ==1 ? "item_text__price-rec" : "")
-				//-по БЄМ должно біть item_newprice и item_oldprice
-				//- почему инлайн стили, а не модификатор
 				span.newprice(style = "color: " + objItem.color)=objItem.price 
 				span.oldprice=objItem.oldprice
 			div.item_text__rating
 				if objItem.rating
 					each itemAr in objItem.color_star
-						//- почему инлайн стили, а не модификатор
 						i.fa.fa-star(style = "color: " + itemAr)
 			div.item_text__heart
 				if objItem.heart
 					i.far.fa-heart
 		div.tooltip.tooltip__page3
 			div.tooltip__page3-sale=objItem.fsale
-			// div.tooltip__page3-new=objItem.fnew
-			// было это условие , переписала под наш с Лешей флажок
 			div(class = objItem.page == 1  ? "tooltip__page2" : 
 						objItem.page == 5  ? "tooltip__page2" : "tooltip__page3-new")=objItem.fnew
 	if objItem.button == true
