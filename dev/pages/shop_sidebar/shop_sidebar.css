@@ -1,8 +1,9 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
-.container {
-  min-width: 1920px;
+.container_page3 {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 .section1_title {
   font: 500 35px 'Montserrat', sans-serif;
@@ -30,6 +31,24 @@ body {
   background-color: #f9f9f9;
   padding: 0 20%;
   height: 100%;
+}
+.section2 .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.section2 .price_block {
+  width: 130px;
 }
 .section2_title {
   color: #293341;
@@ -82,10 +101,16 @@ body {
   line-height: 30px;
 }
 .section2_top .block1 {
-  background-color: #e8e8e8;
   width: 100px;
   height: 100px;
   margin-bottom: 30px;
+  overflow: hidden;
+  background-size: contain;
+}
+.section2_top .block1-img {
+  background-size: contain;
+  width: 100%;
+  height: 100%;
 }
 .section2_top .block2 {
   padding-left: 25px;
@@ -176,6 +201,9 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+.section3 a {
+  cursor: pointer;
 }
 .section3 .item_list {
   display: -webkit-box;

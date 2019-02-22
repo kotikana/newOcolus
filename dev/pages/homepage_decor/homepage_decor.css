@@ -1,6 +1,90 @@
+.chair {
+  background: #606060;
+  color: white;
+}
+.chair_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  padding: 50px 50px 0 50px;
+}
+.chair_menu_card {
+  font-size: 13px;
+  line-height: 15px;
+  margin-right: 40px;
+}
+.chair_nordik {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.chair_nordik .nordik_title {
+  text-align: center;
+  font-size: 80px;
+}
+.chair_nordik .nordik_text {
+  font-size: 14px;
+}
+.chair_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 25px;
+  font-size: 13px;
+}
+.chair_oferta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 170px;
+}
+.chair_oferta_variant {
+  width: calc(100% / 3);
+  background: #e5edf3;
+  color: #71899f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 50px;
+}
+.nth {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.video {
+  display: none;
+  width: 100%;
+  height: 1000px;
+}
 .container_page2 {
-  max-width: 1782px;
+  max-width: 1920px;
   padding: 70px;
+  margin: 95px auto 0px;
   margin: 0 auto;
 }
 .page2_title {
@@ -30,7 +114,7 @@ a {
   cursor: pointer;
 }
 .home {
-  padding-top: 100px;
+  padding-top: 270px;
 }
 .home_divbutton {
   text-align: center;
@@ -189,6 +273,8 @@ a {
 .instagram_block-photo {
   position: relative;
   margin-right: 10px;
+  width: 288px;
+  height: 288px;
 }
 .instagram_block-photo .fab {
   color: #ffffff;
