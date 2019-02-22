@@ -8,3 +8,4 @@ $('._select').each(function(){
 $('._select').change(function(){
 	$(this).parent().children('._selecttitle').text( $(this).children('option:selected').text() );
 });
+

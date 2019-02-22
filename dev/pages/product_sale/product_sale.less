@@ -32,14 +32,16 @@ body {
 		color:  #7b7b7b;
 		margin-right: 5px;
 		cursor: pointer;
-
+		&:hover {
+			color:  #7b7b7b;
+			text-shadow: 1px 1px 0 #7F8285;
+			transform: translate(-1px, -1px);
+		}
 		&:after{
 			content:'/';
 			margin-left: 5px;
-
+			display: inline-block;
 		}
-
-
 	}
 }
 
@@ -76,12 +78,10 @@ body {
 .slider{
 	margin-bottom: 10px;
 	max-width: 560px;
-	border: 1px solid lightgrey;
 }
 .slider2{
 	max-width: 560px;
 	&_slide_img{
-		border: 1px solid lightgrey;
 		height: 159px;
 		width: 129px;
 	}

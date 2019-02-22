@@ -24,11 +24,11 @@
 		justify-content: space-between;
 		height: 100px;
 		align-items: center;
-		&_link{
+		&-link{
 			cursor: pointer;
 			padding-left: 19%;
 		}
-		&_search{
+		&-search{
 			cursor: pointer;
 			padding-right: 19%;
 		}
@@ -36,6 +36,14 @@
 }
 .basket{
 	padding-right: 19%;
+	&_link{
+		color:  #7b7b7b;
+		&:hover {
+			color:  #7b7b7b;
+			text-shadow: 1px 1px 0 #7F8285;
+			transform: translate(-1px, -1px);
+		}
+	}
 }
 .language{
 	padding-right: 15px;
@@ -85,12 +93,14 @@
 	}
 	
 	&_item{
+		color:  #7b7b7b;
 		padding:5px 15px;
 		cursor: pointer;
 		letter-spacing: 1px;
 		&:hover {
-			text-shadow: 1px 1px 0 #7F8285, 2px 2px 0 #686D6E ;
-			transform: translate(-2px, -2px);
+			color:  #7b7b7b;
+			text-shadow: 1px 1px 0 #7F8285;
+			transform: translate(-1px, -1px);
 		}
 	}
 	&_item__footer{

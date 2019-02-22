@@ -12,7 +12,7 @@ $(document).ready(function(){
 		asNavFor: '.slider',
 
 		focusOnSelect: true,
-		prevArrow:'<img  class="prev" src="img/img_service/arrow_left.jpg">',
+		prevArrow:'<img class="prev" src="img/img_service/arrow_left.jpg">',
 		nextArrow:'<img class="next" src="img/img_service/arrow_right.jpg">',
 		responsive: [
 		{
@@ -25,6 +25,7 @@ $(document).ready(function(){
 			}
 		},]
 	});
+	
 //rating
 $('.choice_rating').raty({
 	starOff: 'https://raw.githubusercontent.com/wbotelhos/raty/master/lib/images/star-off.png',
@@ -76,30 +77,3 @@ $('._plus').click(function () {
 	});
 })(jQuery);
 
-//popup
-
-$(function() {
-	var current=$('.slick-current').find('.slider_img');
-	current.clone().appendTo('.inner' );
-});
-
-$(function() {
-	$('._show_popup').click(function () {
-		$($(this).data('popup')).fadeIn();
-	});
-
-
-	$('._btn_close').click(function () {
-		$(this).parents('.popup').fadeOut();
-	});
-
-	$('.popup').click(function () {
-		$(this).fadeOut();
-	});
-
-	$('.popup .inner').click(function (e) {
-		e.stopPropagation();
-	});
-
-
-});

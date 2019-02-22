@@ -7,7 +7,6 @@ html(lang='en')
 		link(rel="stylesheet", href="dev/general/fonts/fonts.css")
 		link(rel="stylesheet", href="dev/general/Normalize.css")
 		link(link rel="shortcut icon" href="img/img_service/favicon.ico" type="image/png")
-
 	body
 		.header
 			.header_top
@@ -18,76 +17,77 @@ html(lang='en')
 						option(value='ukrainian') Ukrainian
 						option(value='russian') Russian
 				.menu
-						a.menu_item WOMEN
-						a.menu_item MEN
-						a.menu_item CHILDREN
-						a.menu_item ACCESSORIES 
-						a.menu_item BLOG 
-						a.menu_item CONTACT
+						a.menu_item(href="#") WOMEN
+						a.menu_item(href="#") MEN
+						a.menu_item(href="#") CHILDREN
+						a.menu_item(href="#") ACCESSORIES 
+						a.menu_item(href="blog.html") BLOG 
+						a.menu_item(href="contact.html") CONTACT
 				.basket
-					a.backet_link $0.0 ITEMS
+					a.basket_link(href="#") $0.0 ITEMS
 			.header_down
-				a.header_down_link
-					img(src="img/img_service/line.svg", alt="")
-				a.header_down_logo
-					img(src="img/img_service/logo.png", alt='logo')
-				a.header_down_search
-					img(src="img/img_service/search.svg", alt="")
+				a.header_down-link(href="#")
+					img(src="img/img_service/line.svg", alt="menu")
+				a.header_down-logo(href="homepage_decor.html")
+					img(src="img/img_service/logo.png", alt="logo")
+				a.header_down-search(href="search_results.html")
+					img(src="img/img_service/search.svg", alt="search")
 		.main
 			h1.main_title Use Instagram to Boost Your Online Sales
 			p.main_text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been <br> the industry's standard dummy text ever since the 1500s
 			.container.layout
 				.row.layout_row
 					.col-3.layout_row_item
-						img(src="img/01fashion_1.jpg", alt="")
+						img(src="img/01fashion_1.jpg", alt="img-product")
 					.col-3.layout_row_item
-						img(src="img/01fashion_2.jpg", alt="")
+						img(src="img/01fashion_2.jpg", alt="img-product")
 					.col-3.layout_row_item
-						img(src="img/01fashion_3.jpg", alt="")
+						img(src="img/01fashion_3.jpg", alt="img-product")
 					.col-3.layout_row_item
-						img(src="img/01fashion_4.jpg", alt="")
+						img(src="img/01fashion_4.jpg", alt="img-product")
 				.row.layout_row
 					.col-3.layout_row_item
-						img(src="img/01fashion_5.jpg", alt="")
+						img(src="img/01fashion_5.jpg", alt="img-product")
 					.col-3.layout_row_item
-						img(src="img/01fashion_6.jpg", alt="")
+						img(src="img/01fashion_6.jpg", alt="img-product")
 					.col-3.layout_row_item
-						img(src="img/01fashion_7.jpg", alt="")
+						img(src="img/01fashion_7.jpg", alt="img-product")
 					.col-3.layout_row_item
-						img(src="img/01fashion_8.jpg", alt="")
+						img(src="img/01fashion_8.jpg", alt="img-product")
 				.row.layout_row
 					.col-3.layout_row_item
-						img(src="img/01fashion_9.jpg", alt="")
+						img(src="img/01fashion_9.jpg", alt="img-product")
 					.col-3.layout_row_item
-						img(src="img/01fashion_10.jpg", alt="")
+						img(src="img/01fashion_10.jpg", alt="img-product")
 					.col-3.layout_row_item
-						img(src="img/01fashion_11.jpg", alt="")
+						img(src="img/01fashion_11.jpg", alt="img-product")
 					.col-3.layout_row_item
-						img(src="img/01fashion_12.jpg", alt="")
+						img(src="img/01fashion_12.jpg", alt="img-product")
 		.footer
 			h1.footer_title Join Our Newsletter
 			form.form(method="post" action="#")
 				input.form_input(type="email" id="email" name="subscribe" placeholder="Enter your email address"  required)
 				button.form_button(type="button") Subscribe 
 			.menu.menu__footer
-				a.menu_item.menu_item__footer WOMEN
-				a.menu_item.menu_item__footer MEN
-				a.menu_item.menu_item__footer CHILDREN
-				a.menu_item.menu_item__footer ACCESSORIES 	
-				a.menu_item.menu_item__footer BLOG 
-				a.menu_item.menu_item__footer CONTACT
+				a.menu_item.menu_item__footer(href="#") WOMEN
+				a.menu_item.menu_item__footer(href="#") MEN
+				a.menu_item.menu_item__footer(href="#") CHILDREN
+				a.menu_item.menu_item__footer(href="#") ACCESSORIES 	
+				a.menu_item.menu_item__footer(href="blog.html") BLOG 
+				a.menu_item.menu_item__footer(href="contact.html") CONTACT
 			.social
-				a
-					img.social_item(src="img/img_service/fb.png", alt="")
-				a
-					img.social_item(src="img/img_service/TW.png", alt="")
-				a
-					img.social_item(src="img/img_service/GG.png", alt="")
-				a
-					img.social_item(src="img/img_service/PP.png", alt="")
-				a
-					img.social_item(src="img/img_service/IN.png", alt="")
+				a(href="#")
+					img.social_item(src="img/img_service/fb.png", alt="facebook")
+				a(href="#")
+					img.social_item(src="img/img_service/TW.png", alt="twitter")
+				a(href="#")
+					img.social_item(src="img/img_service/GG.png", alt="google")
+				a(href="#")
+					img.social_item(src="img/img_service/PP.png", alt="pint")
+				a(href="#")
+					img.social_item(src="img/img_service/IN.png", alt="linkedin")
 			p.footer_copypight © 2018 Ocolus. All Rights Reserved
 		script( src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
 		script( src="dev/pages/home_fashion/home_fashion.js")
+		script( src="dev/general/link.js")
 
