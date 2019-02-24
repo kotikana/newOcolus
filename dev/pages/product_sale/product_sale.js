@@ -77,3 +77,33 @@ $('._plus').click(function () {
 	});
 })(jQuery);
 
+//popup
+
+// $(document).ready(function() {
+//   $('._show_popup').magnificPopup({type:'image'});
+// });
+// $(function() {
+// 	var current=$('.slick-current').find('.slider_img');
+// 	current.clone().appendTo('.inner' );
+// });
+
+// $(function() {
+// 	$('._show_popup').click(function () {
+// 		$($(this).data('popup')).fadeIn();
+// 	});
+
+
+// 	$('._btn_close').click(function () {
+// 		$(this).parents('.popup').fadeOut();
+// 	});
+
+// 	$('.popup').click(function () {
+// 		$(this).fadeOut();
+// 	});
+
+// 	$('.popup .inner').click(function (e) {
+// 		e.stopPropagation();
+// 	});
+
+
+// });
